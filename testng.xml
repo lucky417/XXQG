@@ -9,31 +9,31 @@
     
   <test name="TestCase01" enabled="false">
     <classes>
-      <class name="com.first.TestCase01"/>
+      <class name="first.TestCase01"/>
     </classes>
   </test>
   
    <test name="TestCase02" enabled="false">
     <classes>
-      <class name="com.first.TestCase02"/>
+      <class name="first.TestCase02"/>
     </classes>
   </test>
   
   <test name="TestCase03" enabled="false">
     <classes>
-      <class name="com.first.TestCase03"/>
+      <class name="first.TestCase03"/>
     </classes>
   </test>
   
     <test name="TestCase05" enabled="false">
     <classes>
-      <class name="com.first.TestCase05_orderModule"/>
+      <class name="first.TestCase05_orderModule"/>
     </classes>
   </test>
   
   <test name="TestCase06" enabled="true">
     <classes>
-      <class name="com.first.TestCase06_myMassage"/>
+      <class name="first.TestCase06_myMassage"/>
     </classes>
   </test>
 

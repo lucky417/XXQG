@@ -31,8 +31,6 @@
 			<version>6.13</version>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>xalan</groupId>
 			<artifactId>xalan</artifactId>
@@ -43,16 +41,13 @@
 			<groupId>org.uncommons</groupId>
 			<artifactId>reportng</artifactId>
 			<version>1.1.4</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
 			<version>4.1.0</version>
-			<classifier>no_aop</classifier>
-			<scope>test</scope>
-		</dependency>
+			<classifier>no_aop</classifier></dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -64,19 +59,18 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.17</version>
 		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>5.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.8.3</version>
-			<scope>test</scope>
-		</dependency>
-
-
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<configuration>
+					<executable>java</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

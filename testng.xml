@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="1">
+    
+     <listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+    
+  <test name="TestCase01" enabled="false">
+    <classes>
+      <class name="com.first.TestCase01"/>
+    </classes>
+  </test>
+  
+   <test name="TestCase02" enabled="false">
+    <classes>
+      <class name="com.first.TestCase02"/>
+    </classes>
+  </test>
+  
+  <test name="TestCase03" enabled="false">
+    <classes>
+      <class name="com.first.TestCase03"/>
+    </classes>
+  </test>
+  
+    <test name="TestCase05" enabled="false">
+    <classes>
+      <class name="com.first.TestCase05_orderModule"/>
+    </classes>
+  </test>
+  
+  <test name="TestCase06" enabled="true">
+    <classes>
+      <class name="com.first.TestCase06_myMassage"/>
+    </classes>
+  </test>
+
+  <!-- Test -->
+</suite> <!-- Suite -->

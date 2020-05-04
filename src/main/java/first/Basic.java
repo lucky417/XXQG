@@ -38,6 +38,7 @@ public class Basic{
         System.out.println("bbbbbb");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities );
         //Thread.sleep(10000);
+        System.out.println("cccc");
       //隐式等待
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println("aaaa");

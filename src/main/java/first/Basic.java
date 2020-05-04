@@ -16,7 +16,7 @@ public class Basic{
     @BeforeTest
     public void SetUp() throws InterruptedException, IOException {
         StartSeversTool.appiumStart();
-        System.out.printf("aaa11");
+        //System.out.printf("aaa11");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //设置测试的平台
         capabilities.setCapability("platformName","Android");
@@ -53,7 +53,7 @@ public class Basic{
 
     @AfterTest
     public void SetOff() throws IOException {
-        driver.closeApp();
+        //driver.closeApp();
         StartSeversTool.appiumStop();
     }
     

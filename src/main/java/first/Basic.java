@@ -2,11 +2,14 @@ package first;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
+import org.aspectj.lang.annotation.After;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -15,8 +18,8 @@ public class Basic{
     public static AppiumDriver driver;
     
     @BeforeTest
-    public void SetUp() throws InterruptedException, MalformedURLException {
-    	
+    public void SetUp() throws InterruptedException, IOException {
+        StartSeversTool.appiumStart();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //设置测试的平台
         capabilities.setCapability("platformName","Android");
@@ -47,6 +50,12 @@ public class Basic{
        //Thread.sleep(10000);
        //driver.swipe(432, 1387, 450, 809, 3);
       // Thread.sleep(10000);
+    }
+
+    @AfterTest
+    public void SetOff() throws IOException {
+        System.out.printf("finish");
+        StartSeversTool.appiumStop();
     }
     
 }

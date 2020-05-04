@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Basic{
     public static AppiumDriver driver;
-    
     @BeforeTest
     public void SetUp() throws InterruptedException, IOException {
         StartSeversTool.appiumStart();
@@ -26,7 +25,7 @@ public class Basic{
         //安卓的系统版本
         capabilities.setCapability("platformVersion","9.0");
         //apk的路径        
-        capabilities.setCapability("app","/Users/lucky/workspace/work/Test/src/main/resources/xx.apk");
+        capabilities.setCapability("app","/Users/lucky/workspace/apk/xx.apk");
         //apk的包名
         capabilities.setCapability("appPackage","cn.xuexi.android");
         //设置启动Activity

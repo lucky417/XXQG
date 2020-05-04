@@ -4,10 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 import org.aspectj.lang.annotation.After;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -54,7 +51,7 @@ public class Basic{
 
     @AfterTest
     public void SetOff() throws IOException {
-        System.out.printf("finish");
+        driver.closeApp();
         StartSeversTool.appiumStop();
     }
     

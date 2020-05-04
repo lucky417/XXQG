@@ -15,7 +15,7 @@ public class Basic{
     public static AppiumDriver driver;
     @BeforeTest
     public void SetUp() throws InterruptedException, IOException {
-        //StartSeversTool.appiumStart();
+        StartSeversTool.appiumStart();
         System.out.printf("aaa11");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //设置测试的平台
@@ -35,6 +35,7 @@ public class Basic{
         //capabilities.setCapability("appium",AutomationName.APPIUM);
        // capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
         capabilities.setCapability("noReset", "true");
+        System.out.println("bbbbbb");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities );
         //Thread.sleep(10000);
       //隐式等待
@@ -52,7 +53,7 @@ public class Basic{
     @AfterTest
     public void SetOff() throws IOException {
         driver.closeApp();
-        //StartSeversTool.appiumStop();
+        StartSeversTool.appiumStop();
     }
     
 }

@@ -26,7 +26,7 @@ public class Basic{
         //安卓的系统版本
         capabilities.setCapability("platformVersion","9.0");
         //apk的路径        
-        capabilities.setCapability("app","/Users/lucky/workspace/work/cochat01/src/com/lenovo/automation/Cochat_RY/CoChat.apk");
+        capabilities.setCapability("app","/Users/lucky/workspace/work/Test/src/main/resources/xx.apk");
         //apk的包名
         capabilities.setCapability("appPackage","cn.xuexi.android");
         //设置启动Activity

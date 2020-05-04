@@ -17,11 +17,12 @@ class StartSeversTool{
     public static void appiumStart() throws IOException, InterruptedException {
         // Execute command string to start appium server.
         p = Runtime.getRuntime().exec(cmd);
-
+        p.waitFor();
+        System.out.println(p.exitValue());
         // Provide wait time of 10 mins to start appium server properly.
         // If face any eÏrror(Could not start a new session...) then Increase
         // this time to 15 or 20 mins.
-        Thread.sleep(10000);
+        Thread.sleep(60000);
         if (p != null) {
             System.out.println("Appium server Is started now.");
         }

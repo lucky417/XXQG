@@ -20,7 +20,7 @@ public class Basic{
     static String nodePath = "/usr/local/bin/node";
     // Set path of your appium.js file.
     static String appiumJSPath = "/Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js";
-
+    AppiumDriverLocalService service;
 
     @BeforeTest
     public void SetUp() throws InterruptedException, IOException {
@@ -30,7 +30,7 @@ public class Basic{
         builder.usingDriverExecutable(new File(nodePath));
         builder.withAppiumJS(new File(appiumJSPath));
         builder.usingPort(4723);
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildService(builder);
+        service = AppiumDriverLocalService.buildService(builder);
         service.start();
         service.getUrl();
 
@@ -71,8 +71,9 @@ public class Basic{
 
     @AfterTest
     public void SetOff() throws IOException {
-        //driver.closeApp();
-        StartSeversTool.appiumStop();
+        driver.closeApp();
+        service.stop();
+//        StartSeversTool.appiumStop();
     }
     
 }

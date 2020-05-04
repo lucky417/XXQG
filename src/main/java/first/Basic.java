@@ -2,10 +2,13 @@ package first;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.aspectj.lang.annotation.After;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,9 +16,24 @@ import java.util.concurrent.TimeUnit;
 
 public class Basic{
     public static AppiumDriver driver;
+
+    static String nodePath = "/usr/local/bin/node";
+    // Set path of your appium.js file.
+    static String appiumJSPath = "/Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js";
+
+
     @BeforeTest
     public void SetUp() throws InterruptedException, IOException {
-        StartSeversTool.appiumStart();
+        //StartSeversTool.appiumStart();
+
+        AppiumServiceBuilder builder = new AppiumServiceBuilder();
+        builder.usingDriverExecutable(new File(nodePath));
+        builder.withAppiumJS(new File(appiumJSPath));
+        builder.usingPort(4723);
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildService(builder);
+        service.start();
+        service.getUrl();
+
         //System.out.printf("aaa11");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //设置测试的平台
@@ -36,7 +54,7 @@ public class Basic{
        // capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
         capabilities.setCapability("noReset", "true");
         System.out.println("bbbbbb");
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities );
+        driver = new AndroidDriver(service,capabilities );
         //Thread.sleep(10000);
         System.out.println("cccc");
       //隐式等待

@@ -15,7 +15,7 @@ public class Basic{
     public static AppiumDriver driver;
     @BeforeTest
     public void SetUp() throws InterruptedException, IOException {
-        StartSeversTool.appiumStart();
+        //StartSeversTool.appiumStart();
         System.out.printf("aaa11");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //设置测试的平台
@@ -52,7 +52,7 @@ public class Basic{
     @AfterTest
     public void SetOff() throws IOException {
         driver.closeApp();
-        StartSeversTool.appiumStop();
+        //StartSeversTool.appiumStop();
     }
     
 }

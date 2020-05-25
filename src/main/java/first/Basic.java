@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.aspectj.lang.annotation.After;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
@@ -22,7 +23,7 @@ public class Basic{
     static String appiumJSPath = "/Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js";
     AppiumDriverLocalService service;
 
-    @BeforeTest
+    @BeforeSuite
     public void SetUp() throws InterruptedException, IOException {
         //StartSeversTool.appiumStart();
 
@@ -34,27 +35,11 @@ public class Basic{
         service.start();
         service.getUrl();
 
-        //System.out.printf("aaa11");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        //设置测试的平台
-        capabilities.setCapability("platformName","Android");
-        //设备的序列号
-        capabilities.setCapability("deviceName","a3ede570");
-        //安卓的系统版本
-        capabilities.setCapability("platformVersion","9.0");
-        //apk的路径        
-        capabilities.setCapability("app","/Users/lucky/workspace/apk/xx.apk");
-        //apk的包名
-        capabilities.setCapability("appPackage","cn.xuexi.android");
-        //设置启动Activity
-        capabilities.setCapability("appActivity","com.alibaba.android.rimet.biz.SplashActivity");
-       // capabilities.setCapability("clearSystemFiles", true);
-        capabilities.setCapability("appWaitActivity", "com.alibaba.android.rimet.biz.SplashActivity");
-        //capabilities.setCapability("appium",AutomationName.APPIUM);
-       // capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
-        capabilities.setCapability("noReset", "true");
-        System.out.println("bbbbbb");
-        driver = new AndroidDriver(service,capabilities );
+        DesiredCapabilities capabilities = Phone.huaWei();
+
+
+      //  AndrionPhone capabilities=new AndrionPhone("WTKDU16C12004013","8.0");
+        driver = new AndroidDriver(service, capabilities);
         //Thread.sleep(10000);
         System.out.println("cccc");
       //隐式等待
@@ -69,7 +54,8 @@ public class Basic{
       // Thread.sleep(10000);
     }
 
-    @AfterTest
+
+    @AfterSuite
     public void SetOff() throws IOException {
         driver.closeApp();
         service.stop();

@@ -12,7 +12,14 @@ public class TestCase04_getReadArticleScore extends CommonUtils {
 	public void enterMy() throws InterruptedException {
 		super.enterMy();
 	}
-	
+
+	@Test(dependsOnMethods = {"login"})
+	public void readArticle() throws InterruptedException {
+		super.readArticle();
+	}
+
+
+	/*
 	@Test (dependsOnMethods= {"enterMy"})
 	public void enterStudyScore() throws InterruptedException {
 		super.enterStudyScore();
@@ -34,5 +41,7 @@ public class TestCase04_getReadArticleScore extends CommonUtils {
 		Thread.sleep(8000);
 		System.out.println("end");
 	}
+//
+	 */
 
 }

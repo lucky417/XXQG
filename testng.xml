@@ -24,6 +24,12 @@
       <class name="first.TestCase03"/>
     </classes>
   </test>
+
+  <test name="TestCase04" enabled="true">
+    <classes>
+      <class name="first.TestCase04_getReadArticleScore"/>
+    </classes>
+  </test>
   
     <test name="TestCase05" enabled="false">
     <classes>
@@ -31,11 +37,28 @@
     </classes>
   </test>
   
-  <test name="TestCase06" enabled="true">
+  <test name="TestCase06" enabled="false">
     <classes>
       <class name="first.TestCase06_myMassage"/>
     </classes>
   </test>
 
+  <test name="TestCase09" enabled="false">
+    <classes>
+      <class name="first.TestCase09_answerQuestionDaily"/>
+    </classes>
+  </test>
+
+  <test name="TestCase10" enabled="false">
+    <classes>
+      <class name="first.TestCase10_readArticle"/>
+    </classes>
+  </test>
+
+  <test name="TestCase11" enabled="true">
+    <classes>
+      <class name="first.TestCase11_watchVideo"/>
+    </classes>
+  </test>
   <!-- Test -->
 </suite> <!-- Suite -->

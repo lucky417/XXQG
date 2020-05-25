@@ -8,11 +8,14 @@ import org.testng.Assert;
 
 import io.appium.java_client.TouchAction;
 
+import java.util.List;
+
 public class CommonUtils extends Basic {
 
 	// 定位元素_id
-	public void findElementById(String id) {
-		Basic.driver.findElementById(id);
+	public WebElement findElementById(String id) {
+		WebElement a = Basic.driver.findElementById(id);
+		return a;
 	}
 
 	// 点击元素_id
@@ -90,7 +93,9 @@ public class CommonUtils extends Basic {
 	// 进入my
 	public void enterMy() throws InterruptedException {
 		Thread.sleep(2000);
+		System.out.println("ready to enter listen");
 		clickElementById(Contantnum.MY_ID);
+		System.out.println("enter listen");
 		Thread.sleep(4000);
 
 	}
@@ -123,7 +128,7 @@ public class CommonUtils extends Basic {
 	public void clickXy(int x, int y) throws InterruptedException {
 		TouchAction ta = new TouchAction(Basic.driver);
 		ta.tap(x, y).release().perform();
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 	}
 
 	// 点击进入具体新闻并操作
@@ -228,16 +233,101 @@ public class CommonUtils extends Basic {
 		return minute * 60 * 1000L + second * 1000L;
 	}
 
-	public static void main(String[] args) {
-		System.out.println(getTimeLong("7:55"));
-	}
 
 	//enter my message
 	public void enterMyMessageOne() {
 		System.out.println("ready to click the user picture");
 		clickElementById(Contantnum.MYPICTURE_ID);
 	}
-	
-	
-	
+
+	//get the detail of mine
+	public String getMyDetailMessage(int i){
+		System.out.println("----------$$$$$$$$$$$$----------");
+		//List<WebElement> details = new ArrayList<WebElement>();
+		//WebElement de = Basic.driver.findElement(By.id(Contantnum.MYBASIC_ID));
+		List<WebElement> details = Basic.driver.findElementsById(Contantnum.MYDETAIL);
+		System.out.println("text:"+details.get(i).getText());
+		return details.get(i).getText();
+	}
+	//enter the i want to answer the question
+	public void enterIWantAnswerTheQuestion(){
+		System.out.println("my massage page");
+		List<WebElement> contents = Basic.driver.findElementsById(Contantnum.MYMESSAGE);
+		System.out.println("___$$$$$$$____");
+		System.out.println(contents.get(2).getText());
+		contents.get(2).click();
+	}
+
+	//enter the answer the question every day
+	public void enterAnswerQuestionEveryDay() throws InterruptedException {
+		Thread.sleep(20000);
+		clickXy(400,800);
+		System.out.println("the page is");
+	}
+
+
+	//enter my score
+	public void enterMyScore(){
+		clickElementById(Contantnum.MYSTUDYSCORE_ID);
+	}
+
+	public String getTheTittleOfScorePage(){
+		return getElementtext(Contantnum.MYSCORE_PAGE_ID);
+
+	}
+
+	//read article
+	public void readArticle() throws InterruptedException {
+		List<WebElement> article = Basic.driver.findElementsById("cn.xuexi.android:id/general_card_title_id");
+		System.out.println(article.size());
+		for (int i=0;i< article.size();i++){
+			article.get(i).click();
+			System.out.println("read the"+(i+1)+"文章");
+			Thread.sleep(10000);
+			driver.navigate().back();
+			Thread.sleep(1000);
+		}
+
+
+	}
+
+	//enter my video
+	public void enterVideo(){
+		clickElementByXpath(Contantnum.VIDEO_XPATH);
+		System.out.println("enter the video");
+	}
+	//enter the specific video
+	public void enterTheSpecificVideo() throws InterruptedException {
+		System.out.println("aaaaaaa");
+		//List<WebElement> video = Basic.driver.findElementsByXPath(Contantnum.VIDEO_ON);
+		List<WebElement> time = Basic.driver.findElementsByXPath(Contantnum.VIDEO_TIME_XPATH);
+		for (int f=0;f<time.size();f++) {
+			getTheTime(f);
+			enterTheVi(f);
+			Thread.sleep(10000);
+			driver.navigate().back();
+			Thread.sleep(100);
+		}
+
+	}
+
+	//get the time
+	public void getTheTime(int i){
+		List<WebElement> time = Basic.driver.findElementsByXPath(Contantnum.VIDEO_TIME_XPATH);
+		System.out.println("time:"+time);
+		System.out.println("bbbbbbbbbb");
+		System.out.println(time.get(i));
+		System.out.println("time.get(0).getText()"+time.get(i).getText());
+		//return time.get(0).getText();
+	}
+	//enter the video
+	public void enterTheVi(int i){
+		System.out.println("ccccccc");
+		List<WebElement> video = Basic.driver.findElementsByXPath(Contantnum.VIDEO_ON);
+		video.get(i).click();
+		System.out.println("enter the video");
+	}
+
+
+
 }

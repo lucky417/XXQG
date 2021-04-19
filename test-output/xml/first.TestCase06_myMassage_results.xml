@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestCase06"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.967">
+  <properties />
+  
+  
+            <testcase name="enterMyMessageOne" time="0.130" classname="first.TestCase06_myMassage" />
+                <testcase name="enterMyDetailMessage" time="0.283" classname="first.TestCase06_myMassage" />
+                <testcase name="checkPoint_03_UserStudyId" time="0.360" classname="first.TestCase06_myMassage" />
+                <testcase name="checkPoint_02_Username" time="1.805" classname="first.TestCase06_myMassage" />
+                <testcase name="checkPoint_01_Username" time="2.035" classname="first.TestCase06_myMassage" />
+                <testcase name="login" time="5.146" classname="first.TestCase06_myMassage" />
+                <testcase name="checkPoint_04_UserPhone" time="0.208" classname="first.TestCase06_myMassage" />
+      
+</testsuite>

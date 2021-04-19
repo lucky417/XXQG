@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestCase10"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.971">
+  <properties />
+  
+  
+            <testcase name="login" time="5.563" classname="first.TestCase10_readArticle" />
+                <testcase name="enterMyScore" time="0.214" classname="first.TestCase10_readArticle" />
+                <testcase name="checkpoint_01_enterMyScore" time="2.194" classname="first.TestCase10_readArticle" />
+      
+</testsuite>

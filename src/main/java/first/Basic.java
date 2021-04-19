@@ -45,13 +45,6 @@ public class Basic{
       //隐式等待
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println("aaaa");
-        //driver.findElementById(id)
-        //driver.findElementById("cn.xuexi.android:id/home_bottom_tab_icon_highlight");
-       // driver.findElement(By.xpath("//android.widget.FrameLayout[@content-desc=\"工作\"]/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.ImageView")).click();
-       //driver.findElement(By.xpath("//*[@text='习近平会见瓦努阿图总理萨尔维']")).click();
-       //Thread.sleep(10000);
-       //driver.swipe(432, 1387, 450, 809, 3);
-      // Thread.sleep(10000);
     }
 
 

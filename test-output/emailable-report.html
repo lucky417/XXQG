@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">TestCase04</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">13</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">TestCase11</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">1</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">6</th><th class="num">0</th><th class="num">14</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestCase04 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">first.TestCase04_getReadArticleScore</td><td><a href="#m0">enterMy</a></td><td rowspan="1">1603976907768</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m1">login</a></td><td rowspan="1">1603976907767</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">readArticle</a></td><td rowspan="1">1603976907769</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">TestCase11 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">first.TestCase11_watchVideo</td><td><a href="#m3">SetUp</a></td><td rowspan="1">1603976907735</td><td rowspan="1">21</td></tr><tr><th colspan="4">TestCase11 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">first.TestCase11_watchVideo</td><td><a href="#m4">SetOff</a></td><td rowspan="1">1603976917809</td><td rowspan="1">0</td></tr><tr><th colspan="4">TestCase11 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">first.TestCase11_watchVideo</td><td><a href="#m5">enterTheSpecificVideo</a></td><td rowspan="1">1603976912802</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m6">enterVideo</a></td><td rowspan="1">1603976912802</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m7">login</a></td><td rowspan="1">1603976912801</td><td rowspan="1">0</td></tr></tbody>
+</table>
+<h2>TestCase04</h2><h3 id="m0">first.TestCase04_getReadArticleScore#enterMy</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestCase04_getReadArticleScore.enterMy()[pri:0, instance:first.TestCase04_getReadArticleScore@52feb982] depends on not successfully finished methods
+	at first.Runtest.main(Runtest.java:16)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">first.TestCase04_getReadArticleScore#login</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: Invalid server instance exception has occured: The invalid appium node /Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js has been defined
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validateNodeStructure(AppiumServiceBuilder.java:107)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.checkAppiumJS(AppiumServiceBuilder.java:290)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:386)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:299)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:74)
+	at first.Basic.SetUp(Basic.java:34)
+	at first.Runtest.main(Runtest.java:16)
+Caused by: java.io.IOException: The node /Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.jsdoesn&apos;t exist
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validateNodeStructure(AppiumServiceBuilder.java:109)
+	... 23 more
+... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">first.TestCase04_getReadArticleScore#readArticle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestCase04_getReadArticleScore.readArticle()[pri:0, instance:first.TestCase04_getReadArticleScore@52feb982] depends on not successfully finished methods
+	at first.Runtest.main(Runtest.java:16)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestCase11</h2><h3 id="m3">first.TestCase11_watchVideo#SetUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: Invalid server instance exception has occured: The invalid appium node /Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js has been defined
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validateNodeStructure(AppiumServiceBuilder.java:107)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.checkAppiumJS(AppiumServiceBuilder.java:290)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:386)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:299)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:74)
+	at first.Basic.SetUp(Basic.java:34)
+	at first.Runtest.main(Runtest.java:16)
+Caused by: java.io.IOException: The node /Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.jsdoesn&apos;t exist
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validateNodeStructure(AppiumServiceBuilder.java:109)
+	... 23 more
+... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">first.TestCase11_watchVideo#SetOff</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">first.TestCase11_watchVideo#enterTheSpecificVideo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestCase11_watchVideo.enterTheSpecificVideo()[pri:0, instance:first.TestCase11_watchVideo@32d2fa64] depends on not successfully finished methods
+	at first.Runtest.main(Runtest.java:16)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">first.TestCase11_watchVideo#enterVideo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestCase11_watchVideo.enterVideo()[pri:0, instance:first.TestCase11_watchVideo@32d2fa64] depends on not successfully finished methods
+	at first.Runtest.main(Runtest.java:16)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">first.TestCase11_watchVideo#login</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: Invalid server instance exception has occured: The invalid appium node /Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js has been defined
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validateNodeStructure(AppiumServiceBuilder.java:107)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.checkAppiumJS(AppiumServiceBuilder.java:290)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:386)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:299)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:74)
+	at first.Basic.SetUp(Basic.java:34)
+	at first.Runtest.main(Runtest.java:16)
+Caused by: java.io.IOException: The node /Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.jsdoesn&apos;t exist
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validateNodeStructure(AppiumServiceBuilder.java:109)
+	... 23 more
+... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

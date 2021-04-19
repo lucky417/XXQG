@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="TestCase04(failed)">
+    <classes>
+      <class name="first.TestCase04_getReadArticleScore">
+        <methods>
+          <include name="readArticle"/>
+          <include name="SetOff"/>
+          <include name="enterMy"/>
+          <include name="login"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- first.TestCase04_getReadArticleScore -->
+    </classes>
+  </test> <!-- TestCase04(failed) -->
+  <test name="TestCase11(failed)">
+    <classes>
+      <class name="first.TestCase11_watchVideo">
+        <methods>
+          <include name="enterTheSpecificVideo"/>
+          <include name="enterVideo"/>
+          <include name="SetOff"/>
+          <include name="login"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- first.TestCase11_watchVideo -->
+    </classes>
+  </test> <!-- TestCase11(failed) -->
+</suite> <!-- Failed suite [Suite] -->
